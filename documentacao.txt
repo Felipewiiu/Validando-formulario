@@ -1,0 +1,18 @@
+  console.log(cpf)
+    return numerosRepetidos.includes(cpf)
+    
+}
+
+Esse include é o método que determina se um array contém um determinado elemento, retornando true ou false apropriadamente.
+
+-- Exemplo 2 -----------------------------------------------------
+
+function frutas(fruta) {
+    const salada = ["banana", "maçã", "uva"]
+
+    const busca = salada.includes(fruta)
+
+    console.log(`esse é o resultado ${busca}`)
+}
+
+frutas("banana")

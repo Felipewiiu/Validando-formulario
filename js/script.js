@@ -3,7 +3,7 @@ import ehUmCPF from "./valida-cpf.js"
 const camposDoFormulario = document.querySelectorAll("[required]")
 
 camposDoFormulario.forEach(campos =>{
-    campos.addEventListener("blur",  () => verificaCampo(campos.value))
+    campos.addEventListener("blur",  () => verificaCampo(campos))
     
 })
 

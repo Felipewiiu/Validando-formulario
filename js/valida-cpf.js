@@ -6,6 +6,7 @@ export default function ehUmCPF(campo) {
     }else{
         console.log("Existe!")
     }
+
 }
 
 function validaNumerosRepetidos (cpf){
@@ -21,7 +22,7 @@ function validaNumerosRepetidos (cpf){
         '88888888888',
         '99999999999',
     ]
-    console.log(cpf)
+    
     return numerosRepetidos.includes(cpf)
     
 }
@@ -31,16 +32,16 @@ function validaPrimeiroDigito(cpf) {
     let multiplicador = 10;
 
     for(let tamanho = 0; tamanho < 9; tamanho++ ){
-        soma += cpf[tamanho * multiplicador]
+        soma += cpf[tamanho] * multiplicador
         multiplicador--
     }
 
     soma = (soma * 10 ) % 11 // modolo da divisão por 11 %
-    if(soma == 10 || soma == 11){
+    if(soma == 10 || soma == 1){
         soma = 0
     }
 
-    return soma != [9]
+    return soma != cpf[9]
 }
 
 function validaSegundoDigito(cpf) {
@@ -48,14 +49,18 @@ function validaSegundoDigito(cpf) {
     let multiplicador = 11;
 
     for(let tamanho = 0; tamanho < 10; tamanho++ ){
-        soma += cpf[tamanho * multiplicador]
+        soma += cpf[tamanho] * multiplicador
         multiplicador--
+
     }
 
+    // console.log(soma)//318
+
     soma = (soma * 10 ) % 11 // modolo da divisão por 11 %
-    if(soma == 10 || soma == 11){
+    if(soma == 10 || soma == 1){
         soma = 0
     }
 
-    return soma != [10]
+    return soma != cpf[10] // isso é uma comparação de valores
+    
 }

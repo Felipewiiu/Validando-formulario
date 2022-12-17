@@ -16,3 +16,9 @@ function frutas(fruta) {
 }
 
 frutas("banana")
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+-- VALIDAÇÃO DE FORMULÁRIO COM O VALIDITY 
+
+É o comportamento padrão do formulário para tratamento de erro
